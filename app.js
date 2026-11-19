@@ -315,7 +315,7 @@
   /* ---------- 知識・技能・態度 ---------- */
   function ksa(focus) {
     const d = D(), t = T(), comps = allComps();
-    const used = (pred) => comps.filter(pred).map((c) => `<a href="${link("domains")}#c${c.code}" class="dlink d${c.d.n}">${c.code}</a>`).join("、");
+    const used = (pred) => comps.filter(pred).map((c) => `<a href="${link("domains")}#c${c.code}" class="dlink d${c.d.n}">${c.code}</a>`).join(lang === "en" ? ", " : "、");
     const themes = Object.keys(d.themes);
     app.innerHTML = `
     <div class="pagehead"><div class="wrap">
@@ -384,8 +384,8 @@
           <td class="dm" data-h="${t.cols[1]}">${esc(c.d.name)}</td>
           <td class="st" data-h="${t.cols[2]}">${esc(c.statement)}</td>
           <td class="sm" data-h="${t.cols[3]}">${c.k.map((x) => `<button class="tbtn kc" type="button" data-k="${x}">${x}</button>`).join(" ")}</td>
-          <td class="sm" data-h="${t.cols[4]}">${c.s.map((x) => esc(skillName(x))).join("、")}</td>
-          <td class="sm" data-h="${t.cols[5]}">${c.a.map((x) => esc(attName(x))).join("、")}</td>
+          <td class="sm" data-h="${t.cols[4]}">${c.s.map((x) => esc(skillName(x))).join(lang === "en" ? ", " : "、")}</td>
+          <td class="sm" data-h="${t.cols[5]}">${c.a.map((x) => esc(attName(x))).join(lang === "en" ? ", " : "、")}</td>
           <td class="lg" data-h="${t.exp}（${esc(d.levels[li])}）">${esc(c.exp[li])}</td>
           <td class="lg" data-h="${t.scn}（${esc(d.levels[li])}）">${esc(c.sc[li])}</td></tr>`;
       }).join("");
