@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>中小學 AI 素養框架</title>
+<meta name="description" content="賦能學習者迎向 AI 時代：中小學 AI 素養框架（OECD／歐盟 2026）。四個領域、19 項素養能力、知識・技能・態度與三級學習者期望，中英對照。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" id="brandLink" href="#/zh/">
+      <span class="mark" aria-hidden="true">AI</span>
+      <span class="txt"><b id="brandT">中小學 AI 素養框架</b><small id="brandS">OECD × 歐盟・2026</small></span>
+    </a>
+    <nav class="navlinks" id="navlinks"></nav>
+    <button class="iconbtn langbtn" id="langBtn" type="button">EN</button>
+    <button class="iconbtn" id="themeBtn" type="button" aria-label="切換深淺色">🌓</button>
+    <button class="iconbtn menubtn" id="menuBtn" type="button" aria-controls="navlinks" aria-expanded="false">☰</button>
+  </div>
+</header>
+<nav class="rail" id="rail" aria-label="快速導覽"></nav>
+
+<main id="app"></main>
+
+<footer>
+  <div class="wrap" id="foot"></div>
+</footer>
+<button class="totop" id="totop" type="button" aria-label="回到頂端">↑</button>
+<div class="pop" id="pop" role="dialog" hidden></div>
+
+<script src="data/framework.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
